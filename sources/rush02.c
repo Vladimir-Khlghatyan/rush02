@@ -44,13 +44,13 @@ int	main(int ac, char **av)
 		return (ft_putstr("Too many arguments\n"));
 	else if (ac == 3)
 		dict = ft_create_dict(av[ac - 2], NULL);
-	else if (ac < 3)
+	else
 		dict = ft_create_dict("./dictionary/numbers.dict", NULL);
 	if (!dict)
 		return (ft_putstr("Dict Error\n"));
 	if (ac == 2 || ac == 3)
 		num = ft_create_num(dict, ft_num_check(av[ac - 1]), -1);
-	else if (ac == 1)
+	else
 	{
 		buffer = get_next_line(0);
 		num = ft_create_num(dict, ft_num_check(buffer), -1);
