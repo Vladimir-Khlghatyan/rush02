@@ -52,7 +52,7 @@ int	main(int ac, char **av)
 		num = ft_create_num(dict, ft_num_check(av[ac - 1]), -1);
 	else
 	{
-		buffer = get_next_line(0);
+		buffer = get_next_line("enter number> ", 0);
 		num = ft_create_num(dict, ft_num_check(buffer), -1);
 		ft_free(buffer, NULL);
 	}

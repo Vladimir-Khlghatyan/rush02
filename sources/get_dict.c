@@ -94,7 +94,7 @@ t_dict	*ft_create_dict(char *path, char *buffer)
 	while (1)
 	{
 		buffer = ft_free(buffer, NULL);
-		buffer = get_next_line(fd);
+		buffer = get_next_line(NULL, fd);
 		if (!buffer)
 			break ;
 		if (buffer[0] == '\0')

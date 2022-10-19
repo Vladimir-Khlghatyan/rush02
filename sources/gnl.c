@@ -53,13 +53,15 @@ static char	*ft_add_char_to_buf(char *buf, char c)
 	return (new_buf);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(char *message, int fd)
 {
 	int		rd;
 	char	c;
 	char	*buffer;
 
 	buffer = NULL;
+	if (message)
+		write(1, message, ft_strlen(message));
 	while (1)
 	{
 		rd = read(fd, &c, 1);
