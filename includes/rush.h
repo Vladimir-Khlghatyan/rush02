@@ -37,7 +37,7 @@ typedef struct s_num
 	struct s_num	*next;
 }				t_num;
 
-char	*get_next_line(int fd);
+char	*get_next_line(char *message, int fd);
 char	*ft_free(char *str1, char *str2);
 char	**ft_arrfree(char **arr);
 char	**ft_split(char *s, char c);
