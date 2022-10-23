@@ -53,6 +53,7 @@ t_num	*ft_check_if_value_is_in_dick(t_dict *dict, t_num *num)
 		if (!ft_dictval(dict, tmp->d4))
 		{
 			ft_free_lists(NULL, num);
+			ft_putstr("Dict ");
 			return (NULL);
 		}
 		tmp = tmp->next;
